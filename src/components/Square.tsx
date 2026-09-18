@@ -34,7 +34,7 @@ export function Square({
   onClick,
 }: SquareProps) {
   const PieceIcon = piece ? PIECE_COMPONENTS[piece.code] : null;
-  const labelColor = isLight ? 'text-wood-dark' : 'text-wood-light';
+  const labelColor = isLight ? 'text-violet' : 'text-sage';
 
   return (
     <button
@@ -43,14 +43,14 @@ export function Square({
       onClick={() => onClick(name)}
       className={[
         'relative aspect-square select-none focus:outline-none',
-        isLight ? 'bg-wood-light' : 'bg-wood-dark',
+        isLight ? 'bg-sage' : 'bg-violet',
         interactive ? 'cursor-pointer hover:brightness-110' : 'cursor-default',
       ].join(' ')}
     >
       {/* Last-move tint */}
-      {isLastMove && <span className="absolute inset-0 bg-yellow-300/30" />}
+      {isLastMove && <span className="absolute inset-0 bg-lavender/35" />}
       {/* Selected tint */}
-      {isSelected && <span className="absolute inset-0 bg-yellow-400/45" />}
+      {isSelected && <span className="absolute inset-0 bg-mint/50" />}
       {/* Checked king glow */}
       {isCheck && (
         <span className="absolute inset-0 bg-[radial-gradient(circle,rgba(214,48,38,0.75)_10%,rgba(214,48,38,0.35)_55%,transparent_78%)]" />
@@ -58,11 +58,11 @@ export function Square({
 
       {/* Legal-move dot (empty target) */}
       {isLegalMove && (
-        <span className="absolute left-1/2 top-1/2 h-[24%] w-[24%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/25" />
+        <span className="absolute left-1/2 top-1/2 h-[24%] w-[24%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-plum/45" />
       )}
       {/* Capture ring */}
       {isCapture && (
-        <span className="absolute inset-[5%] rounded-full border-[min(0.45vw,4px)] border-black/30" />
+        <span className="absolute inset-[5%] rounded-full border-[min(0.45vw,4px)] border-mint/70" />
       )}
 
       {/* Piece */}

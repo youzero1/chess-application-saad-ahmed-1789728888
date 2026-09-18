@@ -5,16 +5,16 @@ export const Route = createRootRoute({
   notFoundComponent: NotFound,
 });
 
-// The app shell: warm felt background, serif header, centered layout.
+// The app shell: dark plum background, serif header, centered layout.
 function RootLayout() {
   return (
-    <div className="min-h-screen bg-felt text-cream">
-      <header className="border-b border-gold/20 bg-felt-light/60">
+    <div className="min-h-screen bg-plum text-lavender">
+      <header className="border-b border-violet/30 bg-plum-light/60">
         <div className="mx-auto flex max-w-6xl items-baseline justify-between px-4 py-4">
-          <h1 className="font-display text-3xl font-semibold tracking-wide text-gold">
+          <h1 className="bg-gradient-to-r from-mint to-violet bg-clip-text font-display text-3xl font-semibold tracking-wide text-transparent">
             Chess
           </h1>
-          <p className="hidden text-sm italic text-cream-dim sm:block">
+          <p className="hidden text-sm italic text-lavender-dim sm:block">
             A classic game against the computer
           </p>
         </div>
@@ -28,9 +28,9 @@ function RootLayout() {
 
 function NotFound() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-felt text-cream">
+    <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-plum text-lavender">
       <p className="text-lg">This page does not exist.</p>
-      <Link to="/" className="text-sm text-gold underline underline-offset-4">
+      <Link to="/" className="text-sm text-mint underline underline-offset-4">
         Go to the home page
       </Link>
     </div>

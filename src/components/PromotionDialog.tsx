@@ -30,8 +30,8 @@ export function PromotionDialog({ pending, color, onChoose }: PromotionDialogPro
       aria-modal="true"
       aria-label="Choose promotion piece"
     >
-      <div className="w-full max-w-xs rounded-xl border border-gold/40 bg-felt-light p-5 shadow-2xl">
-        <h2 className="mb-4 text-center font-display text-xl font-semibold text-gold">
+      <div className="w-full max-w-xs rounded-xl border border-violet/50 bg-plum-light p-5 shadow-2xl">
+        <h2 className="mb-4 text-center font-display text-xl font-semibold text-mint">
           Promote pawn to
         </h2>
         <div className="grid grid-cols-4 gap-2">
@@ -45,7 +45,7 @@ export function PromotionDialog({ pending, color, onChoose }: PromotionDialogPro
                 title={choice.label}
                 aria-label={choice.label}
                 onClick={() => onChoose(choice.value)}
-                className="rounded-lg border border-cream-dim/30 bg-felt p-1.5 transition-colors hover:border-gold hover:bg-gold/15 focus:border-gold focus:outline-none"
+                className="rounded-lg border border-lavender-dim/30 bg-plum p-1.5 transition-colors hover:border-mint hover:bg-mint/15 focus:border-mint focus:outline-none"
               >
                 <Icon />
               </button>

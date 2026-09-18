@@ -45,25 +45,25 @@ export function GameStatus({ status, turn, playerColor, aiThinking }: GameStatus
       className={`rounded-lg border px-4 py-3 ${
         isAlert
           ? 'border-red-500/50 bg-red-950/40'
-          : 'border-gold/25 bg-felt-light/70'
+          : 'border-violet/40 bg-plum-light/70'
       }`}
     >
       <div className="flex items-center justify-between gap-3">
         <p
           className={`font-display text-lg font-semibold ${
-            isAlert ? 'text-red-300' : 'text-cream'
+            isAlert ? 'text-red-300' : 'text-lavender'
           }`}
         >
           {title}
         </p>
         {aiThinking && (
-          <span className="flex items-center gap-2 text-sm text-cream-dim">
-            <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-gold/40 border-t-gold" />
+          <span className="flex items-center gap-2 text-sm text-lavender-dim">
+            <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-mint/40 border-t-mint" />
             Thinking…
           </span>
         )}
       </div>
-      {detail && <p className="mt-1 text-sm text-cream-dim">{detail}</p>}
+      {detail && <p className="mt-1 text-sm text-lavender-dim">{detail}</p>}
     </div>
   );
 }

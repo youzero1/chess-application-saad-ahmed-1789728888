@@ -22,11 +22,11 @@ function Row({
 }) {
   return (
     <div className="flex items-center gap-2">
-      <span className="w-24 shrink-0 text-xs uppercase tracking-wider text-cream-dim">
+      <span className="w-24 shrink-0 text-xs uppercase tracking-wider text-lavender-dim">
         {label}
       </span>
       <span className="flex min-h-7 flex-1 flex-wrap items-center">
-        {pieces.length === 0 && <span className="text-xs text-cream-dim/60">—</span>}
+        {pieces.length === 0 && <span className="text-xs text-lavender-dim/60">—</span>}
         {pieces.map((type, i) => {
           const Icon = PIECE_COMPONENTS[toPieceCode(pieceColor, type)];
           return (
@@ -37,7 +37,7 @@ function Row({
         })}
       </span>
       {delta !== undefined && delta > 0 && (
-        <span className="shrink-0 text-sm font-semibold text-gold">+{delta}</span>
+        <span className="shrink-0 text-sm font-semibold text-mint">+{delta}</span>
       )}
     </div>
   );
@@ -50,7 +50,7 @@ export function CapturedPieces({ captured, playerColor }: CapturedPiecesProps) {
   const delta = materialDelta(captured, playerColor);
 
   return (
-    <div className="space-y-1.5 rounded-lg border border-gold/25 bg-felt-light/70 px-4 py-3">
+    <div className="space-y-1.5 rounded-lg border border-violet/40 bg-plum-light/70 px-4 py-3">
       <Row label="You captured" pieces={mine} pieceColor={opponent} delta={delta} />
       <Row label="You lost" pieces={theirs} pieceColor={playerColor} delta={-delta} />
     </div>

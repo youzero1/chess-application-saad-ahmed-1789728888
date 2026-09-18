@@ -57,7 +57,7 @@ export function ChessBoard({
   }
 
   return (
-    <div className="w-full rounded-lg bg-[repeating-linear-gradient(93deg,#6b4423_0px,#5b3a1e_14px,#4e3016_28px,#66411f_46px,#583719_60px,#6b4423_78px)] p-[3.2%] shadow-[0_18px_50px_rgba(0,0,0,0.6),inset_0_2px_3px_rgba(255,235,200,0.25),inset_0_-3px_6px_rgba(0,0,0,0.5)]">
+    <div className="w-full rounded-lg bg-[linear-gradient(135deg,#2e1065_0%,#5b21b6_50%,#3b0764_100%)] p-[3.2%] shadow-[0_18px_50px_rgba(0,0,0,0.6),inset_0_2px_3px_rgba(233,221,245,0.22),inset_0_-3px_6px_rgba(0,0,0,0.5)]">
       <div className="grid aspect-square w-full grid-cols-8 overflow-hidden rounded-[2px] shadow-[inset_0_0_14px_rgba(0,0,0,0.55)]">
         {cells}
       </div>

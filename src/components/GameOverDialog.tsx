@@ -31,24 +31,24 @@ export function GameOverDialog({ status, turn, playerColor, onPlayAgain }: GameO
       aria-modal="true"
       aria-label="Game over"
     >
-      <div className="w-full max-w-sm rounded-xl border border-gold/40 bg-felt-light p-6 text-center shadow-2xl">
+      <div className="w-full max-w-sm rounded-xl border border-violet/50 bg-plum-light p-6 text-center shadow-2xl">
         <p
           className={`font-display text-3xl font-bold ${
             result === 'Victory'
-              ? 'text-gold'
+              ? 'text-mint'
               : result === 'Defeat'
                 ? 'text-red-300'
-                : 'text-cream'
+                : 'text-lavender'
           }`}
         >
           {result}
         </p>
-        <p className="mt-2 text-cream-dim">{title}</p>
+        <p className="mt-2 text-lavender-dim">{title}</p>
         <button
           ref={buttonRef}
           type="button"
           onClick={onPlayAgain}
-          className="mt-6 w-full rounded-md bg-gold px-4 py-2.5 font-display text-base font-semibold text-felt shadow transition-colors hover:bg-[#e3c153]"
+          className="mt-6 w-full rounded-md bg-mint px-4 py-2.5 font-display text-base font-semibold text-plum shadow transition-colors hover:brightness-110"
         >
           Play again
         </button>

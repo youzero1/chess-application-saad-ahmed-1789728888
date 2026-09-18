@@ -3,16 +3,15 @@
 @theme {
   --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
 
-  /* Classic wooden set palette */
-  --color-wood-light: #f0d9b5; /* warm maple */
-  --color-wood-dark: #b58863; /* walnut */
-  --color-frame: #5b3a1e; /* mahogany frame */
-  --color-frame-deep: #3a2310; /* frame shadow edge */
-  --color-gold: #d4af37;
-  --color-felt: #201611; /* deep warm page background */
-  --color-felt-light: #2e211a;
-  --color-cream: #f3e9d2;
-  --color-cream-dim: #cbb79a;
+  /* Green & purple palette */
+  --color-sage: #eceeed; /* light squares — soft sage green */
+  --color-violet: #7a3fa0; /* dark squares — deep royal purple */
+  --color-mint: #4ade80; /* green accents */
+  --color-mint-deep: #16a34a; /* darker green for emphasis */
+  --color-plum: #241233; /* page background — dark violet-plum */
+  --color-plum-light: #341a4a; /* card surfaces */
+  --color-lavender: #e9ddf5; /* primary light text */
+  --color-lavender-dim: #b39dcf; /* dimmed text */
 
   --animate-piece-in: piece-in 160ms ease-out;
 
@@ -25,5 +24,12 @@
       transform: scale(1);
       opacity: 1;
     }
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-plum);
+    color: var(--color-lavender);
   }
 }
