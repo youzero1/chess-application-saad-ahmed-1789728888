@@ -1,1 +1,30 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap");
+
+@theme {
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+
+  /* Classic wooden set palette */
+  --color-wood-light: #f0d9b5; /* warm maple */
+  --color-wood-dark: #b58863; /* walnut */
+  --color-frame: #5b3a1e; /* mahogany frame */
+  --color-frame-deep: #3a2310; /* frame shadow edge */
+  --color-gold: #d4af37;
+  --color-felt: #201611; /* deep warm page background */
+  --color-felt-light: #2e211a;
+  --color-cream: #f3e9d2;
+  --color-cream-dim: #cbb79a;
+
+  --animate-piece-in: piece-in 160ms ease-out;
+
+  @keyframes piece-in {
+    from {
+      transform: scale(0.72);
+      opacity: 0.35;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
