@@ -44,7 +44,7 @@ export function Square({
       className={[
         'relative aspect-square select-none focus:outline-none',
         isLight ? 'bg-wood-light' : 'bg-wood-dark',
-        interactive ? 'cursor-pointer' : 'cursor-default',
+        interactive ? 'cursor-pointer hover:brightness-110' : 'cursor-default',
       ].join(' ')}
     >
       {/* Last-move tint */}

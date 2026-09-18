@@ -1,5 +1,5 @@
 ---
-status: pending
+status: implemented
 title: Chess web app vs AI with classic wooden board
 ---
 
